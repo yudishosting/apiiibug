@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhatsApp Web API</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>WhatsApp Web API</h1>
+      <div id="status" class="status disconnected">
+        Status: Tidak terhubung
+      </div>
+    </header>
+    
+    <main>
+      <section id="pairing-section" class="card">
+        <h2>Pairing WhatsApp</h2>
+        <div id="qr-container">
+          <div id="qr-placeholder">QR code akan muncul di sini...</div>
+          <img id="qr-code" src="/img/qr-code.png" alt="QR Code" style="display: none;">
+        </div>
+        <p class="instructions">
+          Scan QR code di atas dengan WhatsApp di ponsel Anda:
+          <ol>
+            <li>Buka WhatsApp di ponsel</li>
+            <li>Ketuk Menu atau Pengaturan dan pilih Perangkat Tertaut</li>
+            <li>Ketuk Tautkan Perangkat</li>
+            <li>Arahkan ponsel ke layar ini untuk memindai kode</li>
+          </ol>
+        </p>
+      </section>
+      
+      <section id="messaging-section" class="card" style="display: none;">
+        <h2>Kirim Pesan</h2>
+        
+        <form id="send-form">
+          <div class="form-group">
+            <label for="number">Nomor Telepon:</label>
+            <input type="text" id="number" name="number" placeholder="628123456789" required>
+          </div>
+          <div class="form-group">
+            <label for="loop-count">Jumlah Loop:</label>
+            <input type="number" id="loop-count" name="loop-count" min="1" max="10000" value="1">
+          </div>
+          <div class="form-group">
+            <label for="delay">Delay (ms):</label>
+            <input type="number" id="delay" name="delay" min="500" max="10000" value="500">
+          </div>
+        </form>
+        
+        <div class="template-section">
+          <h3>Select Bug Type:</h3>
+          <div class="template-grid">
+            <div class="template-card" data-message="STUNT DELAY BUG" data-type="stunt">
+              <div class="template-header">STUNT</div>
+              <div class="template-content">Bug delay WhatsApp</div>
+            </div>
+            </div>
+          </div>
+        </div>
+        
+        <div id="send-result"></div>
+      </section>
+    </main>
+  </div>
+  
+  <script src="/js/app.js"></script>
+</body>
+</html>

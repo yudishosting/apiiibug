@@ -1,0 +1,29 @@
+{
+  "name": "project-waweb",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "description": "WhatsApp Web API menggunakan WhiskeySockets/Baileys",
+  "dependencies": {
+    "@hapi/boom": "^10.0.1",
+    "lotusbail": "^6.7.18-Alpha",
+    "chalk": "^4.1.2",
+    "dotenv": "^16.5.0",
+    "ejs": "^3.1.10",
+    "express": "^4.18.2",
+    "mongoose": "^7.5.2",
+    "pino": "^8.15.1",
+    "qrcode": "^1.5.3",
+    "qrcode-terminal": "^0.12.0",
+    "readline": "^1.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
